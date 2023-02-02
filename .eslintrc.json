@@ -10,6 +10,7 @@
         "ecmaVersion": "latest"
     },
     "rules": {
+        "no-extranous-dependencies": 0,
         "indent": [
             "error",
             4
