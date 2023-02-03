@@ -1,6 +1,7 @@
 const { nanoid } = require('nanoid');
 const notes = require('./notes');
 
+// POST /notes handler
 const addNoteHandler = (request, h) => {
     const { title, tags, body } = request.payload;
 
@@ -36,4 +37,15 @@ const addNoteHandler = (request, h) => {
     return response;
 };
 
-module.exports = { addNoteHandler };
+// GET /notes handler
+const getAllNotesHandler = () => ({
+    status: 'success',
+    data: {
+        notes,
+    },
+});
+
+module.exports = {
+    addNoteHandler,
+    getAllNotesHandler,
+};
