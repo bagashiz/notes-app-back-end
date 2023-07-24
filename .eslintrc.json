@@ -11,10 +11,8 @@
     },
     "rules": {
         "no-extranous-dependencies": 0,
-        "indent": [
-            "error",
-            4
-        ],
+        "no-underscore-dangle": 0,
+        "indent": ["error", 4],
         "no-console": 0
     }
 }
