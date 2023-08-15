@@ -1,6 +1,6 @@
 {
     "name": "notes-app-back-end",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Back-end for Dicoding's notes app.",
     "main": "index.js",
     "scripts": {
