@@ -91,6 +91,19 @@ class UsersService {
         }
         return id;
     }
+
+    /**
+     * getUsersByUsername is a method that will be used to handle the GET request
+     * to get a user by its username
+     */
+    async getUsersByUsername(username) {
+        const query = {
+            text: 'SELECT id, username, fullname FROM users WHERE username LIKE $1',
+            values: [`%${username}%`],
+        };
+        const result = await this._pool.query(query);
+        return result.rows;
+    }
 }
 
 module.exports = UsersService;
